@@ -1,6 +1,6 @@
 # Домашнее задание к занятию "6. Работа с файлами, DnD"
 
-[![Build status](https://github.com/GolubchikovKirill/dnd_netology/actions/workflows/pages.yml/badge.svg)](https://github.com/GolubchikovKirill/dnd_netology/actions/workflows/pages.yml)
+[![Build status](https://github.com/GolubchikovKirill/dnd_netology/actions/workflows/pages.yml/badge.svg?branch=main&event=push)](https://github.com/GolubchikovKirill/dnd_netology/actions/workflows/pages.yml?query=branch%3Amain)
 
 GitHub Pages: https://golubchikovkirill.github.io/dnd_netology/
 
