@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #107abb;
+  color: #172b4d;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.page-title {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.board {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.column {
+  flex: 1 1 0;
+  background: #dfe3e6;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.column-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cards {
+  min-height: 24px;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 8px;
+  padding: 10px 36px 10px 10px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  cursor: grab;
+  user-select: none;
+  word-break: break-word;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card_hidden {
+  display: none;
+}
+
+.card_dragged {
+  position: fixed;
+  z-index: 1000;
+  margin: 0;
+  transform: rotate(0deg);
+  pointer-events: none;
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+.card-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: #6b778c;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card:hover .card-remove {
+  display: block;
+}
+
+.card-placeholder {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background: rgba(9, 30, 66, 0.13);
+}
+
+.column-footer {
+  margin-top: 12px;
+}
+
+.add-card-btn,
+.add-card-submit,
+.add-card-cancel {
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-card-btn {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  text-align: left;
+  color: #5e6c84;
+  cursor: pointer;
+}
+
+.add-card-btn:hover {
+  background: rgba(9, 30, 66, 0.08);
+}
+
+.add-card-form {
+  display: none;
+}
+
+.add-card-form_active {
+  display: block;
+}
+
+.add-card-input {
+  width: 100%;
+  min-height: 72px;
+  margin-bottom: 8px;
+  padding: 10px;
+  resize: vertical;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.add-card-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.add-card-submit {
+  padding: 9px 12px;
+  background: #5aac44;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.add-card-cancel {
+  padding: 9px 12px;
+  background: #cfd5db;
+  color: #172b4d;
+  cursor: pointer;
+}
+
+.dragging,
+.dragging * {
+  cursor: grabbing !important;
+}
+
+@media (max-width: 900px) {
+  .board {
+    flex-direction: column;
+  }
+}

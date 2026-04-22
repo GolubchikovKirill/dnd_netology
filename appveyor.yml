@@ -1,0 +1,11 @@
+image: Ubuntu
+
+stack: node 20
+
+install:
+  - yarn install
+
+build: off
+
+test_script:
+  - yarn build
